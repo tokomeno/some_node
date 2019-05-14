@@ -12,6 +12,7 @@ import SinglePostPage from "./pages/Feed/SinglePost/SinglePost";
 import LoginPage from "./pages/Auth/Login";
 import SignupPage from "./pages/Auth/Signup";
 import "./App.css";
+import myComp from "./pages/myComp";
 
 class App extends Component {
   state = {
@@ -160,6 +161,7 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
+        <Route path="/:some" exact component={myComp} />
         <Route
           path="/"
           exact
@@ -182,6 +184,7 @@ class App extends Component {
             />
           )}
         />
+
         <Redirect to="/" />
       </Switch>
     );
