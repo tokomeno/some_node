@@ -1,3 +1,69 @@
+
+
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+
+.card{
+  width: 400px;
+
+}
+
+
+
+.card__content{
+  text-align: center;
+  position: relative;
+  padding:5em;
+  background: pink;
+  transition: transform 3s;
+
+  transform-style: preserve-3d;
+
+}
+.card:hover .card__content{
+  /* transform: rotateY(90deg); */
+  transform: rotateY(.5turn);
+}
+
+.card__front, .card__back{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+
+
+}
+.card__front{ 
+  /* background: red; */
+  /* transform: rotateY(.25turn); */
+}
+
+.card__title{
+  font-size:3rem;
+  transform: translateZ(8rem)
+}
+.card__subtitle{
+  transform: translateZ(6rem);
+}
+.card__body{
+  transform: translateZ(4rem);
+}
+
+.card__back{
+  transform: rotateY(.5turn);
+  background: blue;
+}
+
+/* 
 #flashcard {
     margin: auto;
     width:500px;
@@ -9,7 +75,7 @@
 
 /* .d-none {
     display: none;
-} */
+}  
 
 .flipme {
     transform: rotateY(180deg);
@@ -17,10 +83,10 @@
   
 .front, .back {
     transition: 0.5s;
-    /* transform-style: preserve-3d;  */
-    /* perspective: 50px; */
+    transform-style: preserve-3d; 
+    perspective: 50px;
     transform-origin: center;
-}
+} */
 
 
 

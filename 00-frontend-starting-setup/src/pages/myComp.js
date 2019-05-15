@@ -38,7 +38,21 @@ export default class myComp extends Component {
   render() {
     return (
       <div>
-        {this.state.current}
+        {/* ////////////////// */}
+        <div className="card">
+          <div className="card__content">
+            <div className="card__front">
+              <h3 className="card__title">The Fair</h3>
+              <p className="card__subtitle">Lorem ipsum dolor sit. </p>
+            </div>
+
+            <div className="card__back">
+              <p className="card__subtitle">Lorem ipsum dolor sit. </p>
+            </div>
+          </div>
+        </div>
+        {/*  */}
+        {/* {this.state.current} */}
         {/* {this.state.cards.map(card => {
           return (
             <Card
@@ -49,11 +63,11 @@ export default class myComp extends Component {
             />
           );
         })} */}
-        <Card
+        {/* <Card
           card={this.state.cards[this.state.current - 1]}
           nextCard={this.nextCard}
           prevCard={this.prevCard}
-        />
+        /> */}
       </div>
     );
   }
