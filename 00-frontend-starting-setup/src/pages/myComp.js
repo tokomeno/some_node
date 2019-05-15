@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
 import classnames from "classnames";
+import PropTypes from "prop-types";
+
+import FlashCardList from "./FlashCard/FlashCardList";
+import FlashCard from "./FlashCard/FlashCard";
 
 export default class myComp extends Component {
   constructor(props) {
@@ -8,9 +12,9 @@ export default class myComp extends Component {
     console.log(this.props);
     this.state = {
       cards: [
-        { front: "1 how ary", back: "f1 ind" },
-        { front: "2 how ary", back: "2 find" },
-        { front: "3 how ary", back: "3 find" }
+        { id: 1, question: "1 how ary", answer: "f1 ind" },
+        { id: 2, question: "2 how ary", answer: "2 find" },
+        { id: 3, question: "3 how ary", answer: "3 find" }
       ],
       current: 1
     };
@@ -38,8 +42,9 @@ export default class myComp extends Component {
   render() {
     return (
       <div>
+        <FlashCardList flashCards={this.state.cards} />
         {/* ////////////////// */}
-        <div className="card">
+        {/* <div className="card">
           <div className="card__content">
             <div className="card__front">
               <h3 className="card__title">The Fair</h3>
@@ -50,7 +55,7 @@ export default class myComp extends Component {
               <p className="card__subtitle">Lorem ipsum dolor sit. </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/*  */}
         {/* {this.state.current} */}
         {/* {this.state.cards.map(card => {
