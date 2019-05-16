@@ -15,7 +15,6 @@ class FlashCard extends Component {
   };
   render() {
     const { question, answer } = this.props.flashCard;
-    console.log(question, answer, this.props);
     return (
       <div
         className={classnames("card", {
